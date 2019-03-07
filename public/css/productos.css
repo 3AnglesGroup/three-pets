@@ -1,0 +1,159 @@
+.cover {
+    position: relative;
+    height: 100%;
+    padding-top: 130px;
+}
+.cover .image {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    bottom: 60px;
+    background-image: url(../img/cover-productos.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cover .go-to {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 50px;
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+.all-products >.row {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.description h2 {
+    font-family: 'Peperoncino Right';
+    font-size: 70px;
+    padding: 0 20px 20px 15px;
+    border-bottom: 4px solid #B0DB20;
+    line-height: 1;
+    text-align: right;
+}
+.description h2 span {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700;
+    font-size: 40px;
+}
+.description p {
+    margin: 20px 0 40px 15px;
+    font-weight: 300;
+}
+
+.image {
+    text-align: center;
+}
+.image img {
+    max-height: 700px;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 600px;
+    margin: auto;
+}
+.single-chart {
+    width: 25%;
+    justify-content: space-around ;
+}
+.circular-chart {
+    display: block;
+    max-width: 80%;
+    max-height: 250px;
+    margin: auto;
+}
+.circle-bg {
+  fill: none;
+  stroke: #F2F2F2;
+  stroke-width: 6;
+}
+.circle {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: square;
+}
+.animate {
+    stroke: #BFD327;
+    animation: progress 2s ease-out forwards;
+}
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+.percentage {
+  font-size: 0.5em;
+    font-weight: 500;
+  text-anchor: middle;
+}
+
+#init >div:nth-child(even) {
+    background: #F7F7F7;
+    text-align: right;
+}
+#init >div:nth-child(even) .description h2 {
+    padding: 0 15px 20px 20px;
+}
+#init >div:nth-child(even) .description p {
+    margin: 20px 15px 40px 15px;
+    text-align: left;
+}
+
+@media (min-width: 768px){
+    
+    .cover .image {
+        top: 130px;
+    }
+    
+    .description h2 {
+        display: inline-block;
+        padding-left: 15%;
+    }
+    .description p {
+        margin-left: 15%;
+        max-width: 350px;
+    }
+    
+    #init >div:nth-child(even) .description h2 {
+        padding-right: 15%;
+    }
+    #init >div:nth-child(even) .description p {
+        margin: 20px auto 40px auto;
+    }
+    
+}
+
+@media (min-width:992px){
+    
+    .description h2 {
+        font-size: 90px;
+    }
+    .description h2 span {
+        font-size: 50px;
+    }
+    
+}
+
+@media (min-width: 1200px){
+    
+    .description h2 {
+        padding-left: 40%;
+    }
+    .description p {
+        margin-left: 40%;
+    }
+    
+    #init >div:nth-child(even) .description h2 {
+        padding-right: 40%;
+    }
+    
+}

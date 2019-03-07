@@ -1,0 +1,215 @@
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #000307;
+}
+html, body, #app {
+    height: 100%;
+}
+strong {
+    font-weight: 600;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.navbar .brand-mobile {
+    display: block;
+    position: absolute;
+    width: 70px;
+    margin-left: -35px;
+    top: .5rem;
+    left: 50%;
+}
+.navbar .brand {
+    display: none;
+}
+.navbar-toggler {
+    margin-top: 15px;
+}
+.navbar-nav {
+    margin-top: 20px;
+}
+.navbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 1030;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .active>.nav-link {
+    color: rgba(0, 0, 0, .7);
+}
+
+.float {
+    position: fixed;
+    z-index: 2000;
+    top: 1rem;
+    left: 1rem;
+}
+.float a {
+    display: block;
+    width: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer .go-to-top {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #000;
+    margin: 40px 0 40px auto;
+    text-align: center;
+    max-width: 100%;
+}
+.footer .go-to-top:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+.footer .go-to-top img {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+.footer .image {
+    max-width: 80%;
+}
+.footer .box {
+    background: #F7F7F7;
+    margin-bottom: 30px;
+    padding: 30px 0 20px 30px;
+}
+.footer .box img {
+    margin-right: 10px;
+}
+.footer .brand {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.footer .social {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+.footer .contact {
+    margin-bottom: 0;
+}
+.footer .contact strong {
+    color: #B0DB20;
+}
+.footer .copyright {
+    display: block;
+    margin-bottom: 30px;
+    font-size: .9rem;
+    font-weight: 300;
+    padding-left: 30px;
+}
+
+@media (min-width: 768px){
+    
+    .footer .go-to-top {
+        max-width: 50%;
+    }
+    .footer .image {
+        max-width: 90%;
+    }
+    .footer .box {
+        border-radius: 30px 0 0 30px;
+    }
+    
+}
+
+@media (min-width:992px){
+    
+    .navbar .brand-mobile {
+        display: none;
+    }
+    .navbar .brand {
+        display: block;
+    }
+    .navbar-nav {
+        margin-top: 0;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .float {
+        left: 2rem;
+    }
+    
+    .footer .box {
+        padding: 50px 0 50px 80px;
+    }
+    
+    .footer .brand, .footer .social {
+        margin-bottom: 30px;
+    }
+    
+    .footer .copyright {
+        padding-left: 80px;
+    }
+    
+}
+
+@media (min-width:1200px){
+    
+    .footer .copyright {
+        margin-bottom: 60px;
+    }
+    
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Montserrat Light'), url('../fonts/Montserrat-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat'), url('../fonts/Montserrat-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat Medium'), url('../fonts/Montserrat-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat SemiBold'), url('../fonts/Montserrat-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bebas';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bebas Neue Regular'), url('../fonts/BebasNeueRegular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bebas';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Bebas Neue Bold'), url('../fonts/BebasNeueBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Peperoncino Right';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Peperoncino Sans 3D Right'), url('../fonts/PeperoncinoSans-3DRight.woff') format('woff');
+}

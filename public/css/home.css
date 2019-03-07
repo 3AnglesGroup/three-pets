@@ -1,0 +1,348 @@
+.cover {
+    position: relative;
+    height: 100%;
+    padding-top: 130px;
+}
+.cover .image {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    bottom: 60px;
+    background-image: url(../img/cover-home-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cover .go-to {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 50px;
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+.snacks h2 {
+    position: relative;
+    text-align: center;
+    color: #B0DB20;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 120px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+.snacks h2 span {
+    display: block;
+    font-family: 'Bebas';
+    font-weight: 400;
+    color: #000;
+    font-size: 40px;
+    line-height: 0;
+}
+.snacks h2 span.alt {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7px;
+}
+.snacks p {
+    font-weight: 300;
+    text-align: justify;
+}
+.snacks-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #ffffff00 70%, white 90% );
+}
+
+.product h2 {
+    font-family: 'Bebas';
+    font-weight: 700;
+    font-size: 50px;
+    padding: 0 10px 20px 15px;
+    margin-right: 15px;
+    border-bottom: 4px solid #B0DB20;
+}
+.product h2 span {
+    display: block;
+    font-family: 'Peperoncino Right';
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 55px;
+}
+.product p {
+    margin: 20px 15px 0 15px;
+    font-weight: 300;
+}
+.product a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 15px 20px 15px;
+    padding: 10px 30px;
+    background: #B0DB20;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.green {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.green-top, .green-bottom {
+    max-width: none;
+    margin-left: -10%;
+    width: 121%;
+}
+.green .title {
+    position: absolute;
+    z-index: 2;
+    bottom: -60px;
+    right: 15px;
+}
+.green .title h2 {
+    font-family: 'Bebas';
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 35px;
+    line-height: 1;
+}
+.green .title h2 .min {
+    vertical-align: middle;
+    font-size: 25px;
+}
+.green .title h2 .max {
+    display: block;
+    font-family: 'Peperoncino Right';
+    font-size: 55px;
+}
+.green .info {
+    background: #B0DB20;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-top: 70px;
+}
+.green .box {
+    max-width: 1000px;
+    margin: auto;
+}
+.green .box .mod {
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    margin: 10px;
+}
+.green .box .mod span {
+    display: block;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: .9rem;
+    line-height: 1rem;
+}
+
+.subscribe {
+    text-align: center;
+    font-weight: 300;
+}
+.subscribe h2 {
+    font-family: 'Bebas';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.subscribe h2 span {
+    display: block;
+    font-family: 'Peperoncino Right';
+    font-weight: 400;
+    font-size: 55px;
+}
+.subscribe h3 {
+    font-weight: 400;
+    margin-bottom: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.subscribe h3:before, h3:after {
+    content: '';
+    border-top: 1px solid #B0DB20;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+.subscribe h3:after {
+    margin: 0 0 0 20px;
+}
+.subscribe .has-border {
+    border-top: 1px solid #B0DB20;
+    border-bottom: 1px solid #B0DB20;
+}
+.subscribe a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 15px 20px 15px;
+    padding: 10px 30px;
+    background: #B0DB20;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media (min-width: 576px){
+    
+    .green-top, .green-bottom {
+        margin-left: -20%;
+    }
+    .green .title {
+        bottom: 0;
+        right: 9%;
+    }
+    .green .title h2 {
+        font-size: 50px;
+    }
+    .green .title h2 .min {
+        font-size: 30px;
+    }
+    .green .title h2 .max {
+        font-size: 65px;
+    }
+    .green .info {
+        padding-top: 20px;
+    }
+    .green .box .mod {
+        width: 120px;
+        margin: 20px;
+    }
+    
+    .subscribe h2 {
+        font-size: 60px;
+        margin-top: 0;
+    }
+    .subscribe h2 span {
+        font-size: 75px;
+        padding-left: 120px;
+    }
+    .subscribe h3 {
+        font-size: 1.75rem;
+    }
+    .subscribe h3:before, h3:after {
+        margin: 0 50px 0 0;
+        flex: 1 0 50px;
+    }
+    .subscribe h3:after {
+        margin: 0 0 0 50px;
+    }
+    
+}
+
+@media (min-width: 768px){
+    
+    .cover .image {
+        top: 130px;
+        background-image: url(../img/cover-home.png);
+    }
+    
+    .snacks {
+        margin-left: -10%;
+    }
+    .snacks-img:before {
+        display: none;
+    }
+    .snacks p {
+        max-width: 400px;
+        margin: auto;
+    }
+    .snacks h2 {
+        margin-top: 40px;
+    }
+    
+    .product h2 {
+        display: inline-block;
+        padding-left: 20%;
+        font-size: 60px;
+    }
+    .product p {
+        margin-left: 20%;
+        max-width: 300px;
+    }
+    .product a {
+        margin-left: 20%;
+    }
+    
+    .green .title {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .subscribe .has-border {
+        border: 0;
+        border-left: 1px solid #B0DB20;
+        border-right: 1px solid #B0DB20;
+    }
+    
+}
+
+@media (min-width:992px){
+    
+    .snacks h2 {
+        font-size: 110px;
+        line-height: 150px;
+    }
+    .snacks h2 span {
+        font-size: 50px;
+    }
+    .snacks h2 span.alt {
+        top: 10px;
+    }
+    
+    .product h2 {
+        padding-left: 40%;
+    }
+    .product h2 span {
+        font-size: 75px;
+        line-height: 60px;
+    }
+    .product p {
+        margin-left: 40%;
+    }
+    .product a {
+        margin-left: 40%;
+    }
+    
+    .green-top, .green-bottom {
+        margin-left: -5%;
+        width: 111%;
+    }
+    .green .title h2 {
+        font-size: 60px;
+    }
+    .green .title h2 .min {
+        font-size: 40px;
+    }
+    .green .title h2 .max {
+        font-size: 75px;
+    }
+    
+}
+
+@media (min-width:1500px){
+    
+    .green-top, .green-bottom {
+        margin-left: -1%;
+        width: 102%;
+    }
+    
+}

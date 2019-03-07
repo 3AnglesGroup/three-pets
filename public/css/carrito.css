@@ -1,0 +1,220 @@
+.cart {
+    padding-top: 250px;
+    padding-bottom: 50px;
+}
+.cart h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+.cart h2 span {
+    display: block;
+    font-family: 'Bebas';
+    font-weight: 700;
+    color: #B0DB20;
+    font-size: 7rem;
+}
+
+.item {
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+    text-rendering: optimizespeed;
+    padding: 30px 0;
+    border-bottom: 1px solid #C3BFBF;
+}
+.item >* {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: middle;
+    text-rendering: auto;
+}
+.items div:last-child {
+    border: 0;
+}
+.item .image {
+    width: 30%;
+    text-align: center;
+}
+.item .image img {
+    width: 100%;
+    max-width: 120px;
+}
+.item .info {
+    width: 70%;
+    padding: 0 0 0 10%;
+}
+.item .info span {
+    display: block;
+    font-size: .9rem;
+}
+.item span.name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.item span.price {
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 30px 0 10px 0;
+}
+.item span.buttons a {
+    color: #000;
+    margin-right: 10px;
+}
+.item span.buttons a:last-child {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.forms {
+    background: #F7F7F7;
+    padding: 80px 15px 80px 15px;
+}
+.forms form {
+    max-width: 400px;
+    margin: auto;
+}
+
+form.pay .btn {
+    width: 100%;
+    text-transform: uppercase;
+    background: #B0DB20;
+    border-radius: 13px;
+    font-weight: 600;
+    padding: 6px 10px 3px 10px;
+    margin-bottom: 60px;
+}
+form.pay .details {
+    display: block;
+    border-top: 1px solid #C3BFBF;
+    padding: 30px 0;
+}
+form.pay .details-left, form.pay .details-right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+form.pay .details-right {
+    text-align: right;
+}
+form.pay .details a {
+    text-decoration: underline;
+    color: #000;
+}
+form.pay .details a:hover {
+    opacity: .7;
+}
+form.pay .phone, form.pay .order {
+    display: block;
+    padding: 10px 0 10px 30px;
+    background-image: url(../img/icon-phone.svg);
+    background-position: center left;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+form.pay .order {
+    background-image: url(../img/icon-list.svg);
+}
+
+form.subscription span {
+    display: block;
+    margin-bottom: 10px;
+}
+form.subscription span.about {
+    font-size: .9rem;
+    font-weight: 300;
+}
+form.subscription .field {
+    position: relative;
+    margin-top: 15px;
+    border: 2px solid #B0DB20;
+    background: #fff;
+    border-radius: 15px;
+}
+form.subscription .field input[type=text] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    border: 0;
+    background: transparent;
+    color: #BFBDBD;
+    padding: 10px 15px;
+    font-size: .9rem;
+}
+form.subscription .field .btn {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    width: 30%;
+    border-radius: 15px;
+    background: #B0DB20;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: .9rem;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+::-webkit-input-placeholder { color: inherit; opacity: 1; }
+::-moz-placeholder { color: inherit; opacity: 1; }
+:-moz-placeholder { color: inherit; opacity: 1; }
+:-ms-input-placeholder { color: inherit; opacity: 1; }
+:focus::-webkit-input-placeholder { opacity: .5; }
+:focus::-moz-placeholder { opacity: .5; }
+:focus:-moz-placeholder { opacity: .5; }
+:focus:-ms-input-placeholder { opacity: .5; }
+
+@media (min-width: 576px){
+    
+    .cart {
+        padding-bottom: 100px;
+    }
+    .cart h2 {
+        margin-bottom: 100px;
+    }
+    .cart h2 span {
+        font-size: 9rem;
+    }
+    
+    .item {
+        padding: 40px;
+    }
+    .item .info {
+        padding: 0 10%;
+    }
+    
+}
+
+@media (min-width: 768px){
+    
+    .item {
+        max-width: 600px;
+        margin: 0 15% 0 auto;
+    }
+    
+    .forms {
+        border-radius: 30px 0 0 30px;
+        padding: 80px 30px 80px 30px;
+    }
+    
+}
+
+@media (min-width:992px){
+    
+    
+    
+}
+
+@media (min-width:1500px){
+    
+    
+    
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Three Pets</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type='text/css' media='all'>
+    <link rel="stylesheet" href="/css/main.css" type='text/css' media='all'>
+    <link rel="stylesheet" href="/css/app.css" type='text/css' media='all'>
+    @stack('styles')
+    
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-end">
+            <a class="brand-mobile" href="index.html"><img src="img/three-pets-logo.svg" alt="Three Pets"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/productos')}}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#beneficios">Beneficios</a>
+                    </li>
+                    <li class="nav-item brand">
+                        <a class="nav-link" href="/"><img src="img/three-pets-logo.svg" alt="Three Pets"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('tienda')}}">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="float">
+            <a href="/"><img src="/img/float-home.svg"></a>
+            <a href="#"><img src="/img/float-user.svg"></a>
+            <a href="/carrito"><img src="/img/carro.svg"></a>
+        </div>
+        @yield('content')
+        @include('layouts.footer')
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    @stack('scripts')
+</body>
+
+</html>
