@@ -1,5 +1,5 @@
 .cart {
-    padding-top: 250px;
+    padding-top: 230px;
     padding-bottom: 50px;
 }
 .cart h2 {
@@ -9,7 +9,7 @@
     line-height: 1.1;
     margin-bottom: 50px;
 }
-.cart h2 span {
+.cart h2 .max {
     display: block;
     font-family: 'Bebas';
     font-weight: 700;
@@ -46,10 +46,11 @@
     max-width: 120px;
 }
 .item .info {
+    position: relative;
     width: 70%;
-    padding: 0 0 0 10%;
+    padding: 0 60px 0 5%;
 }
-.item .info span {
+.item .info >span {
     display: block;
     font-size: .9rem;
 }
@@ -65,52 +66,118 @@
 }
 .item span.buttons a {
     color: #000;
-    margin-right: 10px;
 }
-.item span.buttons a:last-child {
-    margin-right: 0;
-    margin-left: 10px;
+.item .quantity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
 }
 
-.forms {
+.item .quantity span {
+    font-size: .7rem;
+}
+.item .quantity input {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    width: 55px;
+    border: 2px solid #B0DB20;
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+.item .quantity a {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.item .quantity a.inc {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13.805 13.899'%3E%3Cpath d='M2949.516,462.092h-5.56v5.495h-2.716v-5.495h-5.528v-2.876h5.528v-5.528h2.716v5.528h5.56Z' transform='translate(-2935.712 -453.688)' fill='%23b0db20'/%3E%3C/svg%3E");
+}
+.item .quantity a.des {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='3' viewBox='0 0 10.854 2.876'%3E%3Cpath d='M2972.927,459.854v2.876h-10.855v-2.876Z' transform='translate(-2962.072 -459.854)'/%3E%3C/svg%3E");
+}
+
+.form-box {
     background: #F7F7F7;
     padding: 80px 15px 80px 15px;
 }
-.forms form {
+.form-box form {
     max-width: 400px;
     margin: auto;
 }
-
-form.pay .btn {
-    width: 100%;
-    text-transform: uppercase;
-    background: #B0DB20;
-    border-radius: 13px;
+form.pay .title {
+    display: block;
+    text-align: center;
+    background-color: #B0DB20;
+    border-radius: 10px;
     font-weight: 600;
-    padding: 6px 10px 3px 10px;
-    margin-bottom: 60px;
+    padding: 7px 30px 5px 30px;
+    margin-bottom: 40px;
 }
-form.pay .details {
+form.pay .toggle {
+    margin-bottom: 20px;
+}
+form.pay .toggle .title {
+    cursor: pointer;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center right 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.736' height='12.2' viewBox='0 0 26.736 12.2'%3E%3Cpath d='M2639.922,982.891l11.444,7.777,11.292-7.777' transform='translate(-2637.922 -980.891)' fill='none' stroke='%23010200' stroke-linecap='round' stroke-width='4'/%3E%3C/svg%3E");
+}
+form.pay .toggle .content {
+    display: none;
+}
+form.pay .toggle.active .content {
+    display: block;
+}
+form.pay input[type=text], form.pay input[type=email], form.pay textarea {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 2px solid #B0DB20;
+    background: #fff;
+    border-radius: 10px;
+}
+
+form.pay .separator {
     display: block;
     border-top: 1px solid #C3BFBF;
-    padding: 30px 0;
+    padding: 20px 0;
+}
+form.pay .separator.bottom {
+    border-bottom: 1px solid #C3BFBF;
+    margin-bottom: 20px;
 }
 form.pay .details-left, form.pay .details-right {
     display: inline-block;
     vertical-align: middle;
     width: 50%;
+    margin: 15px 0;
 }
 form.pay .details-right {
     text-align: right;
 }
-form.pay .details a {
-    text-decoration: underline;
-    color: #000;
+form.pay .btn {
+    width: 100%;
+    text-transform: uppercase;
+    background: #B0DB20;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 6px 10px 4px 10px;
+    margin: 20px 0;
 }
-form.pay .details a:hover {
-    opacity: .7;
-}
-form.pay .phone, form.pay .order {
+form.pay .phone {
     display: block;
     padding: 10px 0 10px 30px;
     background-image: url(../img/icon-phone.svg);
@@ -118,49 +185,65 @@ form.pay .phone, form.pay .order {
     background-size: 20px;
     background-repeat: no-repeat;
 }
-form.pay .order {
-    background-image: url(../img/icon-list.svg);
+
+form.pay .subs.checkbox {
+    width: 90%;
+    margin: 10px auto 0 auto;
+    font-size: .8rem;
 }
 
-form.subscription span {
+.checkbox {
     display: block;
-    margin-bottom: 10px;
-}
-form.subscription span.about {
-    font-size: .9rem;
-    font-weight: 300;
-}
-form.subscription .field {
     position: relative;
-    margin-top: 15px;
-    border: 2px solid #B0DB20;
-    background: #fff;
-    border-radius: 15px;
+    padding-left: 30px;
+    margin: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-form.subscription .field input[type=text] {
-    display: inline-block;
-    vertical-align: middle;
-    width: 70%;
-    border: 0;
-    background: transparent;
-    color: #BFBDBD;
-    padding: 10px 15px;
-    font-size: .9rem;
-}
-form.subscription .field .btn {
+.checkbox input {
     position: absolute;
-    top: -2px;
-    right: -2px;
-    bottom: -2px;
-    width: 30%;
-    border-radius: 15px;
-    background: #B0DB20;
-    color: #fff;
-    padding: 10px 15px;
-    font-size: .9rem;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #B0DB20;
+    border-radius: 5px;
+}
+.checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    box-sizing: unset;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid #B0DB20;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+}
+.checkbox input:checked ~ .checkmark:after {
+    opacity: 1;
 }
 
-input[type=text]:focus {
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus, select:focus {
     outline: none;
 }
 ::-webkit-input-placeholder { color: inherit; opacity: 1; }
@@ -172,6 +255,27 @@ input[type=text]:focus {
 :focus:-moz-placeholder { opacity: .5; }
 :focus:-ms-input-placeholder { opacity: .5; }
 
+select {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(../img/arrow-select.svg);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    border: 2px solid #B0DB20;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    padding: 10px 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #fff;
+}
+
 @media (min-width: 576px){
     
     .cart {
@@ -180,7 +284,14 @@ input[type=text]:focus {
     .cart h2 {
         margin-bottom: 100px;
     }
-    .cart h2 span {
+    .cart h2 .min {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 25px;
+    }
+    .cart h2 .max {
+        display: inline-block;
+        vertical-align: middle;
         font-size: 9rem;
     }
     
@@ -188,8 +299,10 @@ input[type=text]:focus {
         padding: 40px;
     }
     .item .info {
-        padding: 0 10%;
+        padding: 0 70px 0 10%;
     }
+    
+    
     
 }
 
@@ -197,10 +310,10 @@ input[type=text]:focus {
     
     .item {
         max-width: 600px;
-        margin: 0 15% 0 auto;
+        margin: 0 auto;
     }
     
-    .forms {
+    .form-box {
         border-radius: 30px 0 0 30px;
         padding: 80px 30px 80px 30px;
     }
@@ -209,12 +322,16 @@ input[type=text]:focus {
 
 @media (min-width:992px){
     
-    
+    .cart {
+        padding-top: 200px;
+    }
     
 }
 
-@media (min-width:1500px){
+@media (min-width:1200px){
     
-    
+    .item {
+        margin-right: 15%;
+    }
     
 }

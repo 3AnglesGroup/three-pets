@@ -29,6 +29,7 @@ img {
 }
 .navbar-nav {
     margin-top: 20px;
+    background: #fff;
 }
 .navbar {
     position: absolute;
@@ -52,10 +53,23 @@ img {
     left: 1rem;
 }
 .float a {
+    position: relative;
     display: block;
     width: 35px;
     margin-bottom: 10px;
     text-align: center;
+}
+.float .float-cart span {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background: #000000;
+    color: #fff;
+    width: 20px;
+    line-height: 1;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 50%;
 }
 
 .footer .go-to-top {
@@ -133,6 +147,7 @@ img {
     }
     .navbar-nav {
         margin-top: 0;
+        background: transparent;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-left: 1.5rem;

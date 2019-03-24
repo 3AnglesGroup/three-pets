@@ -18,5 +18,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('suscripciones','SuscripcionesController@index');
+Route::get('get-products','ProductController@getProduct');
 
 
+//Carrito
+Route::post('orden','CartController@orden');
+
+//Departamentos
+Route::get('departamentos','CartController@departamentos');
+Route::get('ciudades/{id}','CartController@ciudades');
+
+//Payu
+Route::post('payu/pagar','CartController@pagar');

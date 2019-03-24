@@ -5382,6 +5382,11 @@ vue-router@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.2.tgz#dedc67afe6c4e2bc25682c8b1c2a8c0d7c7e56be"
 
+vue-session@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-session/-/vue-session-1.0.0.tgz#ca642c751f569a48f8dd66f356f1727fbe081f7c"
+  integrity sha512-Ep9lRKGgCZdcGV3In3R3zoSp5Wr+hlcIc8WJ9BG+QKzibwaFZnnvp9HBVdd+dU8d6HGLSi5sWywDmd5MkrkfoQ==
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
@@ -5392,6 +5397,7 @@ vue-style-loader@^4.1.0:
 vue-template-compiler@^2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.8.tgz#750802604595134775b9c53141b9850b35255e1c"
+  integrity sha512-SwWKANE5ee+oJg+dEJmsdxsxWYICPsNwk68+1AFjOS8l0O/Yz2845afuJtFqf3UjS/vXG7ECsPeHHEAD65Cjng==
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"

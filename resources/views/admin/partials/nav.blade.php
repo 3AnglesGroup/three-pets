@@ -11,10 +11,9 @@
         </span>
     </a>
     <ul class="treeview-menu">
-      <li ><router-link to="/suscripcion/lista" ><i class="fa fa-eye" ></i>Lista</a></router-link></li>
+      <li ><router-link to="" ><i class="fa fa-eye" ></i>Lista</a></router-link></li>
       <li ><router-link to="/suscripcion/crear" ><i class="fa fa-pencil" ></i>Crear Producto</router-link> </li>
     </ul>
-
   </li>
   <li class="treeview">
     <a href="#"><i class="fa fa-book"></i> <span>Clientes</span>
@@ -35,7 +34,7 @@
         </span>
     </a>
     <ul class="treeview-menu">
-      <li ><router-link to="/suscripcion/lista" ><i class="fa fa-eye" ></i>Lista</a></router-link></li>
+      <li ><router-link to="/admin/suscripciones" ><i class="fa fa-eye" ></i>Lista</a></router-link></li>
       <li ><router-link to="/suscripcion/crear" ><i class="fa fa-pencil" ></i>Crear </router-link> </li>
     </ul>
 

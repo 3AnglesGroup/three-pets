@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('productos', function () {return view('productos');});
 Route::get('tienda', function () {return view('tienda');});
 Route::get('carrito', function () {return view('carrito');});
+Route::get('contacto', function () {return view('contacto');});
 
 //RUTAS ADMIN
 Route::get('admin', function () {return view('admin.index');});

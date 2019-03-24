@@ -14,7 +14,7 @@ class CreateSuscripcionesTable extends Migration
     public function up()
     {
         Schema::create('suscripciones', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('estado')->nullable();
 
             $table->string('ciudad')->nullable();
@@ -29,7 +29,7 @@ class CreateSuscripcionesTable extends Migration
             $table->string('numero_suscripcion')->nullable();
             $table->string('numero_factura')->nullable();
 
-            $producto->json('producto')->nullable();
+            
 
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')

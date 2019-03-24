@@ -2,6 +2,7 @@
 @section('content')
 <div class="cover">
             <div class="image"></div>
+            <a href="/tienda">¡Compra ya!</a>
             <img class="go-to" src="img/arrow.svg">
         </div>
         <div id="init" class="container-fluid">
@@ -11,13 +12,13 @@
                 </div>
                 <div class="col-md-5 col-xl-3 snacks">
                     <h2><span class="alt">Snacks </span>100%<span> naturales</span></h2>
-                    <p>Nuestros snacks están hechos de la mejor materia prima….Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque sagittis est, a fermentum diam consequat dignissim. Sed quis erat sagittis, commodo libero at, interdum mauris. Curabitur sit amet tristique sem. Etiam cursus ligula egestas nibh congue, id ullamcorper nunc interdum. Sed cursus a sapien eget consectetur.</p>
+                    <p>Desde hace 3 años y hasta la actualidad, nace el compromiso de Three Pets con cada uno de nuestros clientes para garantizar productos de calidad, 100% naturales, sin aditivos, hormonas ni conservantes.</p>
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-md-6 p-0 product">
                     <h2>Nuestros <span>Productos</span></h2>
-                    <p>Nuestros snacks están hechos de la mejor materia prima….Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.</p>
+                    <p>Preparar e innovar las mejores soluciones nutricionales para tu mascota es nuestra prioridad, por eso, queremos contribuir con su alimentación y prevenir eventos que atenten contra su bienestar.</p>
                     <a href="#">¡Conócelos!</a>
                 </div>
                 <div class="col-md-6">

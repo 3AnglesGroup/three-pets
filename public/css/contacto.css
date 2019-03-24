@@ -1,0 +1,137 @@
+.dog {
+    background-image: url(../img/contacto-dog.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.info {
+    background: #afdd00;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.info .title {
+    max-width: 50%;
+    text-align: center;
+}
+.info h2 {
+    display: inline-block;
+    font-family: 'Peperoncino Right';
+    font-size: 50px;
+    background-image: url(../img/contacto-icons.svg);
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding: 0 50px 50px 0;
+    margin: 40px 0 0 0;
+}
+
+.info form {
+    margin: auto;
+    max-width: 300px;
+}
+.info label {
+    display: block;
+    margin-top: 20px;
+    font-size: .9rem;
+    color: #fff;
+}
+.info input[type=text], .info input[type=email], .info textarea {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 0;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    outline: none;
+}
+
+.info .btn {
+    display: block;
+    margin: 20px auto;
+    color: #fff;
+    font-size: .9rem;
+    background-image: url(../img/contacto-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 20px 40px;
+}
+
+.info h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.9rem;
+    border-bottom: 2px solid #fff;
+    padding: 30px 0 20px 30px;
+    margin-bottom: 30px;
+}
+.info h3 span {
+    font-weight: 700;
+}
+.info .items {
+    margin-left: 30px;
+}
+.info .bullet {
+    display: block;
+    padding: 5px 0 5px 25px;
+    background-image: url(../img/contacto-bullet.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 12px;
+}
+.info .follow {
+    display: block;
+    margin: 40px 0 30px 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.info a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.info .follow-name {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+
+@media (min-width: 576px){
+    
+    .info h2 {
+        font-size: 70px;
+    }
+    
+    .info label {
+        margin-top: 30px;
+    }
+    
+}
+
+@media (min-width: 768px){
+    
+    .info {
+        padding-top: 150px;
+        padding-bottom: 300px;
+    }
+    
+}
+
+@media (min-width:992px){
+    
+    
+    
+}
+
+@media (min-width:1200px){
+    
+    
+    
+}

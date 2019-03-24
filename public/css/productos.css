@@ -5,11 +5,11 @@
 }
 .cover .image {
     position: absolute;
-    top: 70px;
+    top: 100px;
     left: 10px;
     right: 10px;
     bottom: 60px;
-    background-image: url(../img/cover-productos.png);
+    background-image: url(../img/cover-productos-2.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,6 +28,12 @@
     padding-bottom: 40px;
 }
 
+.description img {
+    display: block;
+    margin: auto;
+    max-width: 150px;
+    margin-bottom: 30px;
+}
 .description h2 {
     font-family: 'Peperoncino Right';
     font-size: 70px;
@@ -42,17 +48,57 @@
     display: block;
     font-weight: 700;
     font-size: 40px;
+    margin-top: -10px;
 }
 .description p {
     margin: 20px 0 40px 15px;
     font-weight: 300;
 }
 
-.image {
-    text-align: center;
+.image .slider {
+    padding: 0 20px;
+    margin: 20px 0;
 }
-.image img {
+.image .slick-slide img {
+    margin: auto;
     max-height: 700px;
+}
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 35px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+}
+.slick-prev {
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.2' height='26.736' viewBox='0 0 12.2 26.736'%3E%3Cpath id='Trazado_3359' data-name='Trazado 3359' d='M2639.922,982.891l11.444,7.777,11.292-7.777' transform='translate(993.091 -2637.922) rotate(90)' fill='none' stroke='%23b0db20' stroke-linecap='round' stroke-width='4'/%3E%3C/svg%3E%0A");
+}
+.slick-next {
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.2' height='26.736' viewBox='0 0 12.2 26.736'%3E%3Cpath id='Trazado_3358' data-name='Trazado 3358' d='M2639.922,982.891l11.444,7.777,11.292-7.777' transform='translate(-980.891 2664.658) rotate(-90)' fill='none' stroke='%23b0db20' stroke-linecap='round' stroke-width='4'/%3E%3C/svg%3E%0A");
+}
+.slick-prev:hover, .slick-next:hover {
+    opacity: .7;
+}
+.slick-prev:focus, .slick-next:focus {
+    outline: none;
 }
 
 .flex-wrapper {
@@ -64,6 +110,7 @@
 .single-chart {
     width: 25%;
     justify-content: space-around ;
+    text-align: center;
 }
 .circular-chart {
     display: block;
@@ -107,11 +154,37 @@
     margin: 20px 15px 40px 15px;
     text-align: left;
 }
+.single-chart span {
+    display: block;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.buy {
+    background: #EAE7E7;
+    text-align: center;
+}
+.buy a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 70px 8px 40px;
+    white-space: nowrap;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #B0DB20;
+    background-image: url(../img/icon-cart.png);
+    background-size: 20px;
+    background-position: center right 35px;
+    background-repeat: no-repeat;
+}
 
 @media (min-width: 768px){
     
     .cover .image {
         top: 130px;
+        background-image: url(../img/banner_productos.jpg);
     }
     
     .description h2 {
@@ -128,6 +201,11 @@
     }
     #init >div:nth-child(even) .description p {
         margin: 20px auto 40px auto;
+    }
+    
+    .single-chart span {
+        margin-top: 10px;
+        font-size: 1rem;
     }
     
 }

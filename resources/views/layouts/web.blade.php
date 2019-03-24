@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Three Pets</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type='text/css' media='all'>
     <link rel="stylesheet" href="/css/main.css" type='text/css' media='all'>
@@ -34,7 +35,7 @@
                         <a class="nav-link" href="{{url('tienda')}}">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +43,7 @@
         <div class="float">
             <a href="/"><img src="/img/float-home.svg"></a>
             <a href="#"><img src="/img/float-user.svg"></a>
-            <a href="/carrito"><img src="/img/carro.svg"></a>
+            <a href="/carrito" class="float-cart"><img src="img/float-cart.svg"><span id="count">0</span></a>
         </div>
         @yield('content')
         @include('layouts.footer')
@@ -52,6 +53,12 @@
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     @stack('scripts')
+    <script>
+    
+       
+    
+      
+    </script>
 </body>
 
 </html>
