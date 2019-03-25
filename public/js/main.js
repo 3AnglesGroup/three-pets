@@ -2,8 +2,11 @@ var $ = jQuery;
 
 $(document).ready(function () {
     let productsLS = JSON.parse(localStorage.getItem('carrito'));
-    let count = productsLS.length;
-    document.getElementById("count").innerHTML = count;  
+    if (productsLS){
+        let count = productsLS.length;
+        document.getElementById("count").innerHTML = count; 
+    }
+     
     
     $('.go-to').click(function () {
 		$("html, body").delay(100).animate({scrollTop: $('#init').offset().top }, 1200);

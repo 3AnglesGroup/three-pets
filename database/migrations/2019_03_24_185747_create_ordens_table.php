@@ -15,6 +15,7 @@ class CreateOrdensTable extends Migration
     {
         Schema::create('ordens', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('estado')->default(false);
             $table->string('nombre')->nullable();
             $table->string('cedula')->nullable();
             $table->string('correo')->nullable();
@@ -24,6 +25,8 @@ class CreateOrdensTable extends Migration
             $table->string('direccion')->nullable();
             $table->string('lugar')->nullable();
             $table->text('observacion')->nullable();
+            $table->string('referencia')->nullable();
+            $table->string('total')->nullable();
             
            
 

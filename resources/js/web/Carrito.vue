@@ -26,7 +26,7 @@
     </div>
 <div class="col-md-5 p-0">
     <div class="form-box">
-        <form action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/"  method="post" @submit="pagar" class="pay">
+        <form action=""   onsubmit="return pagar()" class="pay">
 
         <div class="title">Resumen del pedido</div>
         <div class="separator">
@@ -79,20 +79,22 @@
         <span class="details-left">Total</span><span class="details-right">${{totalApagar}}</span>
         </div>
         <div class="separator">
-        <input type="submit"  @click="pagar" class="btn" value="Pagar">
+        <input  @click="pagar" class="btn" value="Pagar">
         </div>
+        </form>
+        <form action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/" id="myform" method="post">
         <span class="phone">Servicio al cliente  310 584 9856</span>
         <input name="merchantId"         type="hidden"  value="508029">
         <input name="accountId"          type="hidden"  value="512321">
-        <input name="description"        type="hidden"  value="Test PAYU">
-        <input name="referenceCode"      type="hidden"  value="TestPayU">
-        <input name="amount"             type="hidden"  value="20000">
+        <input name="description"        type="hidden"  :value="form.descripcion">
+        <input name="referenceCode"      type="hidden"  :value="form.referencia">
+        <input name="amount"             type="hidden"  :value="form.total">
         <input name="tax"                type="hidden"  value="0">
         <input name="taxReturnBase"      type="hidden"  value="0">
         <input name="currency"           type="hidden"  value="COP">
-        <input name="signature"          type="hidden"  value="7ee7cf808ce6a39b17481c54f2c57acc">
+        <input name="signature"          type="hidden"  :value="signature">
         <input name="test"               type="hidden"  value="1">
-        <input name="buyerEmail"         type="hidden"  value="test@test.com">
+        <input name="buyerEmail"         type="hidden"  :value="form.correo">
         <input name="responseUrl"        type="hidden"  value="http://www.test.com/response">
         <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation">       
         </form>
@@ -104,6 +106,7 @@
 export default {
     data(){
         return{
+            signature:'',
             carts:[],
             subtotal:'',
             departamentos:[],
@@ -122,37 +125,48 @@ export default {
                 observacion:'',
                 recibir:true,
                 carts:[],
-                total:'',
                 // PayU
+                total:'',
+                referencia:'',
+                descripcion:'Tienda Three-pets'
+                
                 
             },
-            payu:[]
+             
+            
      
         }
     },
     created(){
          this.carts = JSON.parse(localStorage.getItem('carrito'));  
          this.total();
-         this.departamento();    
-     
+         this.departamento(); 
+  
     },
     methods:{
         pagar(e){
+            let code = Math.floor((Math.random() * 100) + 1);
+            this.form.referencia = 'TP'+ code + this.form.cedula;
+            this.signature = CryptoJS.MD5("4Vj8eK4rloUd272L48hsrarnUA~508029~"+this.form.referencia+"~"+this.form.total+"~COP");
+
             this.form.carts = JSON.parse(localStorage.getItem('carrito'));
+            
             if(this.form.carts.length < 1){
                 e.preventDefault();
             }else{
-                let status = false;
+                
                 axios.post('api/payu/pagar',this.form).then(res =>{
-                    this.payu = res.data;
-                    
-                    console.log(res.data);  
+                   console.log(res.data);
+                   
+                    if(res.data){
+                        var formulario = document.getElementById("myform");
+                      formulario.submit();
+                      localStorage.clear();
+		            return true;
+                    }
+                      
                 }); 
-                if (status) {
-                    return true;
-                } else {
-                    e.preventDefault();
-                } 
+                 e.preventDefault();
             }
             
            
@@ -189,9 +203,6 @@ export default {
                 });
                 // Añadimos el arreglo actual a storage
                 localStorage.setItem('carrito', JSON.stringify(productsLS) );
-
-                
-             
                 this.getCart();
                 this.total();           
         },
@@ -237,14 +248,13 @@ export default {
             productsLS =  JSON.parse(localStorage.getItem('carrito'));
             productsLS.forEach(function(productLS, index) {
                   sumaLS =  parseInt(productLS.price * productLS.quantity);
-                  subtotal = subtotal + sumaLS;                  
+                  subtotal = subtotal + sumaLS; 
+                                            
             });
             this.subtotal = subtotal;
             this.iva = subtotal * 0.05;
             this.totalApagar = this.subtotal + this.iva;
-            this.form.total = this.subtotal + this.iva;
-
-      
+            this.form.total = this.subtotal + this.iva;      
         }
     }
 }

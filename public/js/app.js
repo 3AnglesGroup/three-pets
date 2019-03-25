@@ -2256,9 +2256,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      signature: '',
       carts: [],
       subtotal: '',
       departamentos: [],
@@ -2277,10 +2280,11 @@ __webpack_require__.r(__webpack_exports__);
         observacion: '',
         recibir: true,
         carts: [],
-        total: '' // PayU
-
-      },
-      payu: []
+        // PayU
+        total: '',
+        referencia: '',
+        descripcion: 'Tienda Three-pets'
+      }
     };
   },
   created: function created() {
@@ -2290,39 +2294,40 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     pagar: function pagar(e) {
-      var _this = this;
-
+      var code = Math.floor(Math.random() * 100 + 1);
+      this.form.referencia = 'TP' + code + this.form.cedula;
+      this.signature = CryptoJS.MD5("4Vj8eK4rloUd272L48hsrarnUA~508029~" + this.form.referencia + "~" + this.form.total + "~COP");
       this.form.carts = JSON.parse(localStorage.getItem('carrito'));
 
       if (this.form.carts.length < 1) {
         e.preventDefault();
       } else {
-        var status = false;
         axios.post('api/payu/pagar', this.form).then(function (res) {
-          _this.payu = res.data;
           console.log(res.data);
-        });
 
-        if (status) {
-          return true;
-        } else {
-          e.preventDefault();
-        }
+          if (res.data) {
+            var formulario = document.getElementById("myform");
+            formulario.submit();
+            localStorage.clear();
+            return true;
+          }
+        });
+        e.preventDefault();
       }
     },
     ciudad: function ciudad(event) {
-      var _this2 = this;
+      var _this = this;
 
       axios.get('api/ciudades/' + event.target.value).then(function (res) {
-        _this2.ciudades = res.data;
+        _this.ciudades = res.data;
         console.log(event.target.value);
       });
     },
     departamento: function departamento() {
-      var _this3 = this;
+      var _this2 = this;
 
       axios.get('api/departamentos').then(function (res) {
-        _this3.departamentos = res.data;
+        _this2.departamentos = res.data;
       });
     },
     orden: function orden() {
@@ -46736,12 +46741,7 @@ var render = function() {
           "form",
           {
             staticClass: "pay",
-            attrs: {
-              action:
-                "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/",
-              method: "post"
-            },
-            on: { submit: _vm.pagar }
+            attrs: { action: "", onsubmit: "return pagar()" }
           },
           [
             _c("div", { staticClass: "title" }, [_vm._v("Resumen del pedido")]),
@@ -47016,11 +47016,24 @@ var render = function() {
             _c("div", { staticClass: "separator" }, [
               _c("input", {
                 staticClass: "btn",
-                attrs: { type: "submit", value: "Pagar" },
+                attrs: { value: "Pagar" },
                 on: { click: _vm.pagar }
               })
-            ]),
-            _vm._v(" "),
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            attrs: {
+              action:
+                "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/",
+              id: "myform",
+              method: "post"
+            }
+          },
+          [
             _c("span", { staticClass: "phone" }, [
               _vm._v("Servicio al cliente  310 584 9856")
             ]),
@@ -47034,19 +47047,18 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: { name: "description", type: "hidden", value: "Test PAYU" }
+              attrs: { name: "description", type: "hidden" },
+              domProps: { value: _vm.form.descripcion }
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: {
-                name: "referenceCode",
-                type: "hidden",
-                value: "TestPayU"
-              }
+              attrs: { name: "referenceCode", type: "hidden" },
+              domProps: { value: _vm.form.referencia }
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: { name: "amount", type: "hidden", value: "20000" }
+              attrs: { name: "amount", type: "hidden" },
+              domProps: { value: _vm.form.total }
             }),
             _vm._v(" "),
             _c("input", { attrs: { name: "tax", type: "hidden", value: "0" } }),
@@ -47060,11 +47072,8 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: {
-                name: "signature",
-                type: "hidden",
-                value: "7ee7cf808ce6a39b17481c54f2c57acc"
-              }
+              attrs: { name: "signature", type: "hidden" },
+              domProps: { value: _vm.signature }
             }),
             _vm._v(" "),
             _c("input", {
@@ -47072,11 +47081,8 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: {
-                name: "buyerEmail",
-                type: "hidden",
-                value: "test@test.com"
-              }
+              attrs: { name: "buyerEmail", type: "hidden" },
+              domProps: { value: _vm.form.correo }
             }),
             _vm._v(" "),
             _c("input", {
