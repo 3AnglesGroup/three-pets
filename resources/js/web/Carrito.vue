@@ -130,7 +130,7 @@ export default {
                 recibir:true,
                 carts:[],
                 // PayU
-                total:'2000',
+                total:'10000',
                 referencia:'',
                 descripcion:'Tienda Three-pets'
                 

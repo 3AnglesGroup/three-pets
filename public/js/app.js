@@ -2285,7 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
         recibir: true,
         carts: [],
         // PayU
-        total: '2000',
+        total: '10000',
         referencia: '',
         descripcion: 'Tienda Three-pets'
       }
