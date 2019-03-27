@@ -259,7 +259,7 @@ export default {
             this.subtotal = subtotal;
             this.iva = subtotal * 0.05;
             this.totalApagar = this.subtotal + this.iva;
-            this.form.total = this.subtotal + this.iva;      
+            // this.form.total = this.subtotal + this.iva;      
         }
     }
 }

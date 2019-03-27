@@ -2400,8 +2400,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.subtotal = subtotal;
       this.iva = subtotal * 0.05;
-      this.totalApagar = this.subtotal + this.iva;
-      this.form.total = this.subtotal + this.iva;
+      this.totalApagar = this.subtotal + this.iva; // this.form.total = this.subtotal + this.iva;      
     }
   }
 });
