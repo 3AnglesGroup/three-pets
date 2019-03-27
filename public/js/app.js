@@ -47069,7 +47069,7 @@ var render = function() {
           "form",
           {
             attrs: {
-              action: "https://checkout.payulatam.com/ppp-web-gateway-payu/",
+              action: "https://gateway.payulatam.com/ppp-web-gateway-payu/",
               id: "myform",
               method: "post"
             }
