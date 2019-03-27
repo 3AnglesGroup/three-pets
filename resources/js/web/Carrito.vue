@@ -73,7 +73,8 @@
         <div class="toggle">
         <div class="title">Método de envío</div>
         <div class="content shipping">
-        <span class="details-left"><label class="checkbox"><input type="checkbox"><span class="checkmark"></span>Gastos de envío</label></span><span class="details-right">$6.000</span>
+        <span class="details-left"><label class="checkbox"><input @change="total()" v-model="bogota" type="checkbox"><span class="checkmark"></span>Gastos de envío a Bogotá</label></span><span class="details-right">$6.000</span>
+        <span class="details-left"><label class="checkbox"><input @change="total()" v-model="otrasCiudades" type="checkbox"><span class="checkmark"></span>Gastos de envío otras Ciudades</label></span><span class="details-right">$12.000</span>
         <small>* $6.000 si es en el área metropolitana de Bogotá.<br>$12.000 a otras ciudades del país.<br>Tu pedido se procesará en 24 horas.</small>
         </div>
         </div>
@@ -110,6 +111,8 @@
 export default {
     data(){
         return{
+            bogota:false,
+            otrasCiudades:false,
             abrir:false,
             enviando:false,
             signature:'',
@@ -261,7 +264,20 @@ export default {
             this.subtotal = subtotal;
             this.iva = subtotal * 0.05;
             this.totalApagar = this.subtotal + this.iva;
-            this.form.total = this.subtotal + this.iva;      
+             this.form.total = this.subtotal + this.iva;  
+            if(this.bogota === true){
+                this.form.total = this.subtotal + this.iva + 6000;
+                this.totalApagar = this.subtotal + this.iva + 6000;
+                console.log('bogota');  
+            }
+            if(this.otrasCiudades === true){
+                this.form.total = this.subtotal + this.iva + 12000;
+                this.totalApagar = this.subtotal + this.iva + 12000;
+                console.log('bogota');  
+            }
+           
+            console.log('hola');
+                
         }
     }
 }

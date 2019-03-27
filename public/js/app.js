@@ -2262,9 +2262,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      bogota: false,
+      otrasCiudades: false,
       abrir: false,
       enviando: false,
       signature: '',
@@ -2404,6 +2407,20 @@ __webpack_require__.r(__webpack_exports__);
       this.iva = subtotal * 0.05;
       this.totalApagar = this.subtotal + this.iva;
       this.form.total = this.subtotal + this.iva;
+
+      if (this.bogota === true) {
+        this.form.total = this.subtotal + this.iva + 6000;
+        this.totalApagar = this.subtotal + this.iva + 6000;
+        console.log('bogota');
+      }
+
+      if (this.otrasCiudades === true) {
+        this.form.total = this.subtotal + this.iva + 12000;
+        this.totalApagar = this.subtotal + this.iva + 12000;
+        console.log('bogota');
+      }
+
+      console.log('hola');
     }
   }
 });
@@ -47050,7 +47067,118 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(1),
+            _c("div", { staticClass: "toggle" }, [
+              _c("div", { staticClass: "title" }, [_vm._v("Método de envío")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content shipping" }, [
+                _c("span", { staticClass: "details-left" }, [
+                  _c("label", { staticClass: "checkbox" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.bogota,
+                          expression: "bogota"
+                        }
+                      ],
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: Array.isArray(_vm.bogota)
+                          ? _vm._i(_vm.bogota, null) > -1
+                          : _vm.bogota
+                      },
+                      on: {
+                        change: [
+                          function($event) {
+                            var $$a = _vm.bogota,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 && (_vm.bogota = $$a.concat([$$v]))
+                              } else {
+                                $$i > -1 &&
+                                  (_vm.bogota = $$a
+                                    .slice(0, $$i)
+                                    .concat($$a.slice($$i + 1)))
+                              }
+                            } else {
+                              _vm.bogota = $$c
+                            }
+                          },
+                          function($event) {
+                            return _vm.total()
+                          }
+                        ]
+                      }
+                    }),
+                    _c("span", { staticClass: "checkmark" }),
+                    _vm._v("Gastos de envío a Bogotá")
+                  ])
+                ]),
+                _c("span", { staticClass: "details-right" }, [
+                  _vm._v("$6.000")
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "details-left" }, [
+                  _c("label", { staticClass: "checkbox" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.otrasCiudades,
+                          expression: "otrasCiudades"
+                        }
+                      ],
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: Array.isArray(_vm.otrasCiudades)
+                          ? _vm._i(_vm.otrasCiudades, null) > -1
+                          : _vm.otrasCiudades
+                      },
+                      on: {
+                        change: [
+                          function($event) {
+                            var $$a = _vm.otrasCiudades,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  (_vm.otrasCiudades = $$a.concat([$$v]))
+                              } else {
+                                $$i > -1 &&
+                                  (_vm.otrasCiudades = $$a
+                                    .slice(0, $$i)
+                                    .concat($$a.slice($$i + 1)))
+                              }
+                            } else {
+                              _vm.otrasCiudades = $$c
+                            }
+                          },
+                          function($event) {
+                            return _vm.total()
+                          }
+                        ]
+                      }
+                    }),
+                    _c("span", { staticClass: "checkmark" }),
+                    _vm._v("Gastos de envío otras Ciudades")
+                  ])
+                ]),
+                _c("span", { staticClass: "details-right" }, [
+                  _vm._v("$12.000")
+                ]),
+                _vm._v(" "),
+                _vm._m(1)
+              ])
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "separator" }, [
               _c("span", { staticClass: "details-left" }, [_vm._v("Total")]),
@@ -47172,27 +47300,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "toggle" }, [
-      _c("div", { staticClass: "title" }, [_vm._v("Método de envío")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "content shipping" }, [
-        _c("span", { staticClass: "details-left" }, [
-          _c("label", { staticClass: "checkbox" }, [
-            _c("input", { attrs: { type: "checkbox" } }),
-            _c("span", { staticClass: "checkmark" }),
-            _vm._v("Gastos de envío")
-          ])
-        ]),
-        _c("span", { staticClass: "details-right" }, [_vm._v("$6.000")]),
-        _vm._v(" "),
-        _c("small", [
-          _vm._v("* $6.000 si es en el área metropolitana de Bogotá."),
-          _c("br"),
-          _vm._v("$12.000 a otras ciudades del país."),
-          _c("br"),
-          _vm._v("Tu pedido se procesará en 24 horas.")
-        ])
-      ])
+    return _c("small", [
+      _vm._v("* $6.000 si es en el área metropolitana de Bogotá."),
+      _c("br"),
+      _vm._v("$12.000 a otras ciudades del país."),
+      _c("br"),
+      _vm._v("Tu pedido se procesará en 24 horas.")
     ])
   }
 ]
