@@ -32,7 +32,7 @@
                         <a class="nav-link" href="/"><img src="img/three-pets-logo.svg" alt="Three Pets"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('tienda')}}">Tienda</a>
+                        <a class="nav-link" href="{{url('shop')}}">Tienda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('contacto')}}">Contacto</a>

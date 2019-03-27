@@ -195,7 +195,7 @@
             </div>
             <div class="row buy">
                 <div class="col-12">
-                    <a href="/tienda">¡Compra ya!</a>
+                    <a href="/shop">¡Compra ya!</a>
                 </div>
             </div>
         </div>

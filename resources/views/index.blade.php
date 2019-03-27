@@ -2,7 +2,7 @@
 @section('content')
 <div class="cover">
             <div class="image"></div>
-            <a href="/tienda">¡Compra ya!</a>
+            <a href="/shop">¡Compra ya!</a>
             <img class="go-to" src="img/arrow.svg">
         </div>
         <div id="init" class="container-fluid">
