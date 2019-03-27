@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Ruta de confirmación
+Route::post('confirmacion','OrdenController@confirmacion');
+
+Route::get('/', function () {return view('index');});
 Route::get('productos', function () {return view('productos');});
 Route::get('tienda', function () {return view('tienda');});
 Route::get('carrito', function () {return view('carrito');});

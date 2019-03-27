@@ -2258,9 +2258,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      abrir: false,
+      enviando: false,
       signature: '',
       carts: [],
       subtotal: '',
@@ -2294,9 +2298,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     pagar: function pagar(e) {
+      this.enviando = true;
       var code = Math.floor(Math.random() * 100 + 1);
       this.form.referencia = 'TP' + code + this.form.cedula;
-      this.signature = CryptoJS.MD5("4Vj8eK4rloUd272L48hsrarnUA~508029~" + this.form.referencia + "~" + this.form.total + "~COP");
+      this.signature = CryptoJS.MD5("yhX4EWry237npTJ5zW1Lw03sq0~794623~" + this.form.referencia + "~" + this.form.total + "~COP");
       this.form.carts = JSON.parse(localStorage.getItem('carrito'));
 
       if (this.form.carts.length < 1) {
@@ -2312,7 +2317,6 @@ __webpack_require__.r(__webpack_exports__);
             return true;
           }
         });
-        e.preventDefault();
       }
     },
     ciudad: function ciudad(event) {
@@ -46741,7 +46745,12 @@ var render = function() {
           "form",
           {
             staticClass: "pay",
-            attrs: { action: "", onsubmit: "return pagar()" }
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.pagar()
+              }
+            }
           },
           [
             _c("div", { staticClass: "title" }, [_vm._v("Resumen del pedido")]),
@@ -46760,249 +46769,274 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "toggle" }, [
-              _c("div", { staticClass: "title" }, [_vm._v("Datos de envío")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.nombre,
-                      expression: "form.nombre"
-                    }
-                  ],
-                  attrs: { type: "text", placeholder: "Nombre completo" },
-                  domProps: { value: _vm.form.nombre },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "nombre", $event.target.value)
-                    }
-                  }
-                }),
+            _c(
+              "div",
+              { class: "toggle" + (_vm.abrir == true ? "active" : "") },
+              [
+                _c("div", { staticClass: "title" }, [_vm._v("Datos de envío")]),
                 _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.cedula,
-                      expression: "form.cedula"
-                    }
-                  ],
-                  attrs: { type: "text", placeholder: "Cédula" },
-                  domProps: { value: _vm.form.cedula },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "cedula", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.correo,
-                      expression: "form.correo"
-                    }
-                  ],
-                  attrs: { type: "email", placeholder: "Correo" },
-                  domProps: { value: _vm.form.correo },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "correo", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.celular,
-                      expression: "form.celular"
-                    }
-                  ],
-                  attrs: { type: "text", placeholder: "Celular / Tel" },
-                  domProps: { value: _vm.form.celular },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "celular", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  { on: { change: _vm.ciudad } },
-                  [
-                    _c("option", [_vm._v("-- Departamento --")]),
-                    _vm._v(" "),
-                    _vm._l(_vm.departamentos, function(departamento) {
-                      return _c(
-                        "option",
-                        {
-                          key: departamento.id,
-                          domProps: { value: departamento.id }
-                        },
-                        [
-                          _vm._v(
-                            "\n        " +
-                              _vm._s(departamento.name) +
-                              "\n        "
-                          )
-                        ]
-                      )
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  [
-                    _c("option", [_vm._v("-- Ciudad --")]),
-                    _vm._v(" "),
-                    _vm._l(_vm.ciudades, function(ciudad) {
-                      return _c("option", { key: ciudad.id }, [
-                        _vm._v(_vm._s(ciudad.name))
-                      ])
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.direccion,
-                      expression: "form.direccion"
-                    }
-                  ],
-                  attrs: { type: "text", placeholder: "Dirección" },
-                  domProps: { value: _vm.form.direccion },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "direccion", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.lugar,
-                      expression: "form.lugar"
-                    }
-                  ],
-                  attrs: {
-                    type: "text",
-                    placeholder: "Apartamento / Casa / Oficina"
-                  },
-                  domProps: { value: _vm.form.lugar },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "lugar", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.observacion,
-                      expression: "form.observacion"
-                    }
-                  ],
-                  attrs: { rows: "4", placeholder: "Observaciones" },
-                  domProps: { value: _vm.form.observacion },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.form, "observacion", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("label", { staticClass: "checkbox subs" }, [
+                _c("div", { staticClass: "content" }, [
                   _c("input", {
                     directives: [
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.form.recibir,
-                        expression: "form.recibir"
+                        value: _vm.form.nombre,
+                        expression: "form.nombre"
                       }
                     ],
-                    attrs: { type: "checkbox" },
-                    domProps: {
-                      checked: _vm.form.recibir,
-                      checked: Array.isArray(_vm.form.recibir)
-                        ? _vm._i(_vm.form.recibir, null) > -1
-                        : _vm.form.recibir
+                    attrs: {
+                      type: "text",
+                      placeholder: "Nombre completo",
+                      required: ""
                     },
+                    domProps: { value: _vm.form.nombre },
                     on: {
-                      change: function($event) {
-                        var $$a = _vm.form.recibir,
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = null,
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 &&
-                              _vm.$set(_vm.form, "recibir", $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              _vm.$set(
-                                _vm.form,
-                                "recibir",
-                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                              )
-                          }
-                        } else {
-                          _vm.$set(_vm.form, "recibir", $$c)
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
                         }
+                        _vm.$set(_vm.form, "nombre", $event.target.value)
                       }
                     }
                   }),
-                  _c("span", { staticClass: "checkmark" }),
-                  _vm._v(
-                    "Acepto recibir información de productos, novedades y promociones!"
-                  )
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.cedula,
+                        expression: "form.cedula"
+                      }
+                    ],
+                    attrs: {
+                      type: "text",
+                      placeholder: "Cédula",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.cedula },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "cedula", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.correo,
+                        expression: "form.correo"
+                      }
+                    ],
+                    attrs: {
+                      type: "email",
+                      placeholder: "Correo",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.correo },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "correo", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.celular,
+                        expression: "form.celular"
+                      }
+                    ],
+                    attrs: {
+                      type: "text",
+                      placeholder: "Celular / Tel",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.celular },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "celular", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    { on: { change: _vm.ciudad } },
+                    [
+                      _c("option", [_vm._v("-- Departamento --")]),
+                      _vm._v(" "),
+                      _vm._l(_vm.departamentos, function(departamento) {
+                        return _c(
+                          "option",
+                          {
+                            key: departamento.id,
+                            domProps: { value: departamento.id }
+                          },
+                          [
+                            _vm._v(
+                              "\n        " +
+                                _vm._s(departamento.name) +
+                                "\n        "
+                            )
+                          ]
+                        )
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    [
+                      _c("option", [_vm._v("-- Ciudad --")]),
+                      _vm._v(" "),
+                      _vm._l(_vm.ciudades, function(ciudad) {
+                        return _c("option", { key: ciudad.id }, [
+                          _vm._v(_vm._s(ciudad.name))
+                        ])
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.direccion,
+                        expression: "form.direccion"
+                      }
+                    ],
+                    attrs: {
+                      type: "text",
+                      placeholder: "Dirección",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.direccion },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "direccion", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.lugar,
+                        expression: "form.lugar"
+                      }
+                    ],
+                    attrs: {
+                      type: "text",
+                      placeholder: "Apartamento / Casa / Oficina",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.lugar },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "lugar", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.observacion,
+                        expression: "form.observacion"
+                      }
+                    ],
+                    attrs: { rows: "4", placeholder: "Observaciones" },
+                    domProps: { value: _vm.form.observacion },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "observacion", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("label", { staticClass: "checkbox subs" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.recibir,
+                          expression: "form.recibir"
+                        }
+                      ],
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: _vm.form.recibir,
+                        checked: Array.isArray(_vm.form.recibir)
+                          ? _vm._i(_vm.form.recibir, null) > -1
+                          : _vm.form.recibir
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.form.recibir,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                _vm.$set(_vm.form, "recibir", $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                _vm.$set(
+                                  _vm.form,
+                                  "recibir",
+                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                )
+                            }
+                          } else {
+                            _vm.$set(_vm.form, "recibir", $$c)
+                          }
+                        }
+                      }
+                    }),
+                    _c("span", { staticClass: "checkmark" }),
+                    _vm._v(
+                      "Acepto recibir información de productos, novedades y promociones!"
+                    )
+                  ])
                 ])
-              ])
-            ]),
+              ]
+            ),
             _vm._v(" "),
             _vm._m(1),
             _vm._v(" "),
@@ -47014,11 +47048,19 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "separator" }, [
-              _c("input", {
-                staticClass: "btn",
-                attrs: { value: "Pagar" },
-                on: { click: _vm.pagar }
-              })
+              !_vm.enviando
+                ? _c("input", {
+                    staticClass: "btn",
+                    attrs: { type: "submit", value: "Pagar" }
+                  })
+                : _c("input", {
+                    staticClass: "btn",
+                    attrs: {
+                      disabled: "",
+                      type: "submit",
+                      value: "Enviando..."
+                    }
+                  })
             ])
           ]
         ),
@@ -47027,8 +47069,7 @@ var render = function() {
           "form",
           {
             attrs: {
-              action:
-                "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/",
+              action: "https://checkout.payulatam.com/ppp-web-gateway-payu/",
               id: "myform",
               method: "post"
             }
@@ -47039,11 +47080,11 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("input", {
-              attrs: { name: "merchantId", type: "hidden", value: "508029" }
+              attrs: { name: "merchantId", type: "hidden", value: "794623" }
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: { name: "accountId", type: "hidden", value: "512321" }
+              attrs: { name: "accountId", type: "hidden", value: "801542" }
             }),
             _vm._v(" "),
             _c("input", {
@@ -47086,18 +47127,14 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: {
-                name: "responseUrl",
-                type: "hidden",
-                value: "http://www.test.com/response"
-              }
+              attrs: { name: "responseUrl", type: "hidden", value: "" }
             }),
             _vm._v(" "),
             _c("input", {
               attrs: {
                 name: "confirmationUrl",
                 type: "hidden",
-                value: "http://www.test.com/confirmation"
+                value: "https://three-pets.test/confirmacion"
               }
             })
           ]
