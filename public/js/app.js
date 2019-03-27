@@ -2411,16 +2411,12 @@ __webpack_require__.r(__webpack_exports__);
       if (this.bogota === true) {
         this.form.total = this.subtotal + this.iva + 6000;
         this.totalApagar = this.subtotal + this.iva + 6000;
-        console.log('bogota');
       }
 
       if (this.otrasCiudades === true) {
         this.form.total = this.subtotal + this.iva + 12000;
         this.totalApagar = this.subtotal + this.iva + 12000;
-        console.log('bogota');
       }
-
-      console.log('hola');
     }
   }
 });

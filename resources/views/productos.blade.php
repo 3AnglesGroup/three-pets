@@ -47,8 +47,8 @@
                 </div>
                 <div class="col-md-6 image">
                     <div class="slider">
-                        <div><img src="img/producto-solomito.png"></div>
-                        <div><img src="img/producto-solomito.png"></div>
+                        <div><img src="tienda/tienda-solomito.png"></div>
+                        <div><img src="tienda/tienda-solomito.png"></div>
                     </div>
                 </div>
             </div>
@@ -94,8 +94,8 @@
                 </div>
                  <div class="col-md-6 image">
                     <div class="slider">
-                        <div><img src="img/producto-solomito.png"></div>
-                        <div><img src="img/producto-solomito.png"></div>
+                        <div><img src="tienda/tienda-rollito.png"></div>
+                        <div><img src="tienda/tienda-rollito.png"></div>
                     </div>
                 </div>
             </div>
@@ -141,8 +141,8 @@
                 </div>
                 <div class="col-md-6 image">
                     <div class="slider">
-                        <div><img src="img/producto-solomito.png"></div>
-                        <div><img src="img/producto-solomito.png"></div>
+                        <div><img src="tienda/tienda-trocitos.png"></div>
+                        <div><img src="tienda/tienda-trocitos.png"></div>
                     </div>
                 </div>
             </div>
@@ -188,8 +188,122 @@
                 </div>
                  <div class="col-md-6 image">
                     <div class="slider">
-                        <div><img src="img/producto-solomito.png"></div>
-                        <div><img src="img/producto-solomito.png"></div>
+                        <div><img src="tienda/tienda-pernil.png"></div>
+                        <div><img src="tienda/tienda-pernil.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 p-0 description">
+                    <img src="images/trocitos.png">
+                    <h2>Lonjitas  <span>de Res</span></h2>
+                    <p>Las lonjitas de res de Three Pets son hechas de las mejores rilas de res. Ayudan a la salud dental y mantendrán a tu
+                    perro entretenido durante horas. Por su alto contenido proteico ayuda la formación de las células y su regeneración.</p>
+                    <div class="flex-wrapper">
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="80">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Proteina</span>
+                        </div>
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="7">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="8, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Grasa</span>
+                        </div>
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="1.5">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="2, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Fibra</span>
+                        </div>
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="11">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="11, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Humedad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 image">
+                    <div class="slider">
+                        <div><img src="tienda/tienda-lonjitas.png"></div>
+                        <div><img src="tienda/tienda-lonjitas.png"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 p-0 description">
+                    <img src="images/pernil cerdo.png">
+                    <h2>Tiritas<span> Ahumadas</span></h2>
+                    <p>Las tiritas ahumadas de Three Pets son hechas de los mejores esófagos de res, ricas en contenido natural de
+                    glucosamina, ayudan a problemas en las articulaciones de tu perro y a su prevención, además al masticarlas elimina la
+                    placa.</p>
+                    <div class="flex-wrapper">
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="80">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Proteina</span>
+                        </div>
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="11">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="8, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Grasa</span>
+                        </div>
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="1.5">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="2, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Fibra</span>
+                        </div>
+                        <div class="single-chart">
+                            <svg viewBox="-2 -2 40 40" class="circular-chart" data-percentage="10">
+                                <path class="circle-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="11, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage"></text>
+                            </svg>
+                            <span>Humedad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 image">
+                    <div class="slider">
+                        <div><img src="tienda/tienda-tiritas.png"></div>
+                        <div><img src="tienda/tienda-tiritas.png"></div>
                     </div>
                 </div>
             </div>
