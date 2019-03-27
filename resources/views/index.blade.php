@@ -90,7 +90,7 @@
             </div>
             <div class="row justify-content-md-center subscribe">
                 <div class="col-12 p-0">
-                    <h2>¡Suscríbete <span>y ahorra!</span></h2>
+                    <h2>¡Suscríbete y haz parte del <span> Club Three-Pets!</span></h2>
                     <h3>¿Cómo funciona?</h3>
                 </div>
                 <div class="col-md-4 col-xl-3 pt-3 p-sm-5">
