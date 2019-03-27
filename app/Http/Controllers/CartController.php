@@ -23,7 +23,6 @@ class CartController extends Controller
     }
 
     public function pagar(Request $request){
-
         $orden = new Orden();
         $orden->storeOrden($request);
         return $request;
