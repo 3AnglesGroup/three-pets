@@ -2260,6 +2260,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2285,7 +2287,7 @@ __webpack_require__.r(__webpack_exports__);
         recibir: true,
         carts: [],
         // PayU
-        total: '10000',
+        total: '',
         referencia: '',
         descripcion: 'Tienda Three-pets'
       }
@@ -2400,7 +2402,8 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.subtotal = subtotal;
       this.iva = subtotal * 0.05;
-      this.totalApagar = this.subtotal + this.iva; // this.form.total = this.subtotal + this.iva;      
+      this.totalApagar = this.subtotal + this.iva;
+      this.form.total = this.subtotal + this.iva;
     }
   }
 });
@@ -46875,45 +46878,55 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    { on: { change: _vm.ciudad } },
-                    [
-                      _c("option", [_vm._v("-- Departamento --")]),
-                      _vm._v(" "),
-                      _vm._l(_vm.departamentos, function(departamento) {
-                        return _c(
-                          "option",
-                          {
-                            key: departamento.id,
-                            domProps: { value: departamento.id }
-                          },
-                          [
-                            _vm._v(
-                              "\n        " +
-                                _vm._s(departamento.name) +
-                                "\n        "
-                            )
-                          ]
-                        )
-                      })
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.departamento,
+                        expression: "form.departamento"
+                      }
                     ],
-                    2
-                  ),
+                    attrs: {
+                      type: "text",
+                      placeholder: "Departamento",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.departamento },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "departamento", $event.target.value)
+                      }
+                    }
+                  }),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    [
-                      _c("option", [_vm._v("-- Ciudad --")]),
-                      _vm._v(" "),
-                      _vm._l(_vm.ciudades, function(ciudad) {
-                        return _c("option", { key: ciudad.id }, [
-                          _vm._v(_vm._s(ciudad.name))
-                        ])
-                      })
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.ciudad,
+                        expression: "form.ciudad"
+                      }
                     ],
-                    2
-                  ),
+                    attrs: {
+                      type: "text",
+                      placeholder: "Ciudad",
+                      required: ""
+                    },
+                    domProps: { value: _vm.form.ciudad },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "ciudad", $event.target.value)
+                      }
+                    }
+                  }),
                   _vm._v(" "),
                   _c("input", {
                     directives: [

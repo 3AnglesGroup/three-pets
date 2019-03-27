@@ -42,8 +42,10 @@
         <input type="text"   v-model="form.cedula" placeholder="Cédula" required>
         <input type="email"  v-model="form.correo" placeholder="Correo" required>
         <input type="text"   v-model="form.celular" placeholder="Celular / Tel" required>
+        <input type="text"   v-model="form.departamento" placeholder="Departamento" required>
+        <input type="text"   v-model="form.ciudad" placeholder="Ciudad" required>
 
-        <select  @change="ciudad">
+        <!-- <select  @change="ciudad">
         <option>-- Departamento --</option>
         <option 
         :value="departamento.id"
@@ -51,15 +53,15 @@
         :key="departamento.id" >
         {{departamento.name}}
         </option>  
-        </select>
+        </select> -->
 
-        <select>
+        <!-- <select>
         <option>-- Ciudad --</option>
         <option
         v-for="ciudad in ciudades"
         :key="ciudad.id"
         >{{ciudad.name}}</option>                   
-        </select>
+        </select> -->
 
         <input type="text" v-model="form.direccion" placeholder="Dirección" required>
         <input type="text" v-model="form.lugar" placeholder="Apartamento / Casa / Oficina" required>
@@ -130,7 +132,7 @@ export default {
                 recibir:true,
                 carts:[],
                 // PayU
-                total:'10000',
+                total:'',
                 referencia:'',
                 descripcion:'Tienda Three-pets'
                 
@@ -259,7 +261,7 @@ export default {
             this.subtotal = subtotal;
             this.iva = subtotal * 0.05;
             this.totalApagar = this.subtotal + this.iva;
-            // this.form.total = this.subtotal + this.iva;      
+            this.form.total = this.subtotal + this.iva;      
         }
     }
 }
