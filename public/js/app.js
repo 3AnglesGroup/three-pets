@@ -2285,7 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
         recibir: true,
         carts: [],
         // PayU
-        total: '',
+        total: '2000',
         referencia: '',
         descripcion: 'Tienda Three-pets'
       }
@@ -47069,7 +47069,7 @@ var render = function() {
           "form",
           {
             attrs: {
-              action: "https://gateway.payulatam.com/ppp-web-gateway-payu/",
+              action: "https://checkout.payulatam.com/ppp-web-gateway-payu/",
               id: "myform",
               method: "post"
             }

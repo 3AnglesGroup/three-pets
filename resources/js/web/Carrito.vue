@@ -84,7 +84,7 @@
 
         </div>
         </form>
-        <form action="https://gateway.payulatam.com/ppp-web-gateway-payu/" id="myform" method="post">
+        <form action="https://checkout.payulatam.com/ppp-web-gateway-payu/" id="myform" method="post">
         <span class="phone">Servicio al cliente  310 584 9856</span>
         <input name="merchantId"         type="hidden"  value="794623">
         <input name="accountId"          type="hidden"  value="801542">
@@ -130,7 +130,7 @@ export default {
                 recibir:true,
                 carts:[],
                 // PayU
-                total:'',
+                total:'2000',
                 referencia:'',
                 descripcion:'Tienda Three-pets'
                 
