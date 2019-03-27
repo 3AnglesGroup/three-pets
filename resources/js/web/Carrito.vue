@@ -98,7 +98,7 @@
         <input name="test"               type="hidden"  value="1">
         <input name="buyerEmail"         type="hidden"  :value="form.correo">
         <input name="responseUrl"        type="hidden"  value="">
-        <input name="confirmationUrl"    type="hidden"  value="https://three-pets.test/confirmacion">       
+        <input name="confirmationUrl"    type="hidden"  value="https://three-pets.com.co/confirmacion">       
         </form>
     </div>
 </div>

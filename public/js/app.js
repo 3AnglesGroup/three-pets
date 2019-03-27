@@ -47134,7 +47134,7 @@ var render = function() {
               attrs: {
                 name: "confirmationUrl",
                 type: "hidden",
-                value: "https://three-pets.test/confirmacion"
+                value: "https://three-pets.com.co/confirmacion"
               }
             })
           ]
