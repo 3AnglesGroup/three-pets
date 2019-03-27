@@ -26,7 +26,6 @@ class CartController extends Controller
 
         $orden = new Orden();
         $orden->storeOrden($request);
-
         return $request;
     }
 }
