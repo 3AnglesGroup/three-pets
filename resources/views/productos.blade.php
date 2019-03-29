@@ -47,8 +47,8 @@
                 </div>
                 <div class="col-md-6 image">
                     <div class="slider">
-                        <div><img src="tienda/tienda-solomito.png"></div>
-                        <div><img src="tienda/tienda-solomito.png"></div>
+                     <div><img src="tienda/tienda-solomito.png"></div>
+                        <div><img src="images/hsolomito.png"></div> 
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                 <div class="col-md-6 image">
                     <div class="slider">
                         <div><img src="tienda/tienda-trocitos.png"></div>
-                        <div><img src="tienda/tienda-trocitos.png"></div>
+                        <div><img src="images/hmix.png"></div>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                  <div class="col-md-6 image">
                     <div class="slider">
                         <div><img src="tienda/tienda-pernil.png"></div>
-                        <div><img src="tienda/tienda-pernil.png"></div>
+                        <div><img src="images/hpernil.png"></div>
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@
                 <div class="col-md-6 image">
                     <div class="slider">
                         <div><img src="tienda/tienda-lonjitas.png"></div>
-                        <div><img src="tienda/tienda-lonjitas.png"></div>
+                        <div><img src="images/hlonjitas.png"></div>
                     </div>
                 </div>
             </div>
@@ -303,7 +303,7 @@
                 <div class="col-md-6 image">
                     <div class="slider">
                         <div><img src="tienda/tienda-tiritas.png"></div>
-                        <div><img src="tienda/tienda-tiritas.png"></div>
+                        <div><img src="images/htiritas.png"></div>
                     </div>
                 </div>
             </div>
