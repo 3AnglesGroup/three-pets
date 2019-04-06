@@ -47254,7 +47254,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("input", {
-              attrs: { name: "test", type: "hidden", value: "1" }
+              attrs: { name: "test", type: "hidden", value: "0" }
             }),
             _vm._v(" "),
             _c("input", {
