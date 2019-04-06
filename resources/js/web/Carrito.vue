@@ -98,7 +98,7 @@
         <input name="taxReturnBase"      type="hidden"  value="0">
         <input name="currency"           type="hidden"  value="COP">
         <input name="signature"          type="hidden"  :value="signature">
-        <input name="test"               type="hidden"  value="1">
+        <input name="test"               type="hidden"  value="0">
         <input name="buyerEmail"         type="hidden"  :value="form.correo">
         <input name="responseUrl"        type="hidden"  value="">
         <input name="confirmationUrl"    type="hidden"  value="https://three-pets.com.co/confirmacion">       
