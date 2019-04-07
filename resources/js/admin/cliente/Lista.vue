@@ -18,7 +18,7 @@ Clientes      <small>Listas</small>
   <section class="content container-fluid">
     <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Listado de Artículos</h3>
+              <h3 class="box-title">Lista</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
