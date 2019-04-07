@@ -19,6 +19,11 @@ class UserController extends Controller
       return back();
     }
 
+    public function logout(){
+      Auth::logout();
+      return view('login');
+    }
+
     public function registro(){
         // $user = new User();
         // $user->name = 'Administrador';

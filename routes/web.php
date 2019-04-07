@@ -24,5 +24,6 @@ Route::get('contacto', function () {return view('contacto');});
 Route::get('login', function () {return view('login');});
 Route::get('admin', function () {return view('admin.index');});
 Route::post('admin','UserController@login');
+Route::get('logout','UserController@logout');
 Route::get('registrar','UserController@registro');
 //FIN DE RUTAS ADMIN
