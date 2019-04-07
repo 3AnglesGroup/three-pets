@@ -18,6 +18,7 @@ class Orden extends Model
             $user->email = $request->correo;
             $user->acepto_politicas_de_tratamiento = $request->recibir;
             $user->password = bcrypt($request->cedula);
+            $user->tipo = 'Cliente';
             $user->save();
         }
       $orden = new Orden();  
