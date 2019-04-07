@@ -15,6 +15,7 @@ class AddStatusOrdens extends Migration
     {
          Schema::table('ordens', function (Blueprint $table) {
             $table->string('status')->nullable();
+            $table->string('reference_pol')->nullable();
            
         });
     }
@@ -27,7 +28,7 @@ class AddStatusOrdens extends Migration
     public function down()
     {
          Schema::table('ordens', function (Blueprint $table) {
-            $table->dropColumn('status');
+            $table->dropColumn(['status','reference_pol',]);
            
         });
     }

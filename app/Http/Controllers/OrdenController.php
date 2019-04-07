@@ -12,8 +12,9 @@ class OrdenController extends Controller
    public function confirmacion(Request $request){
 
         if($request['state_pol'] == 4){
-          $orden = Orden::where('referencia',$request['reference_pol'])->first(); 
-          $orden->estado = true;
+          $orden = Orden::where('correo',$request['email_buyer'])->first(); 
+          $orden->status = 'Pagado';
+          $orden->reference_pol = $request['reference_pol'];
           $orden->save();
           return 200;
         }

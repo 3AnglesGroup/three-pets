@@ -21,6 +21,28 @@
   gtag('config', 'UA-137581418-1');
 </script>
 
+<!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'fdHhkiNoDhDCo9qKz';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+
+    window.ChatraSetup = {
+    colors: {
+        buttonText: '#000', /* chat button text color */
+        buttonBg: '#B0DB20'    /* chat button background color */
+    }
+};
+</script>
+<!-- /Chatra {/literal} -->
+
     
 </head>
 
