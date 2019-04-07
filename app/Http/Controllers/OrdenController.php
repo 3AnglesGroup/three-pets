@@ -13,8 +13,15 @@ class OrdenController extends Controller
 
         if($request['state_pol'] == 4){
           $orden = Orden::where('correo',$request['email_buyer'])->first(); 
-          $orden->status = 'Pagado';
+          $orden->status = 'Aprobada';
           $orden->reference_pol = $request['reference_pol'];
+          $orden->reference_sale = $request['reference_sale'];
+          $orden->save();
+          return 200;
+        }
+        if($request['state_pol'] == 6){
+          $orden = Orden::where('correo',$request['email_buyer'])->first(); 
+          $orden->status = 'Declinada';
           $orden->save();
           return 200;
         }
