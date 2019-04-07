@@ -53,7 +53,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="exampleInputEmail1">Correo</label>
-                    <input type="text" class="form-control" v-model="form.celular" :disabled="editar"   placeholder="Ingresar nombre completo">
+                    <input type="text" class="form-control" v-model="form.correo" :disabled="editar"   placeholder="Ingresar nombre completo">
                   </div>
                   
                   <div class="form-group col-md-6">
