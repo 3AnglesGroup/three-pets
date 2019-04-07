@@ -20,10 +20,16 @@ class UserController extends Controller
     }
 
     public function registro(){
+        // $user = new User();
+        // $user->name = 'Administrador';
+        // $user->email = 'soporte@three-pets.com';
+        // $user->password = bcrypt('silvestre18');
+        // $user->save();
         $user = new User();
         $user->name = 'Administrador';
-        $user->email = 'soporte@three-pets.com';
-        $user->password = bcrypt('silvestre18');
+        $user->email = 'ventas@three-pets.com.co';
+        $user->password = bcrypt('VentasTP19');
+        $user->tipo = 'Admin';
         $user->save();
         return 'OK';
     }
