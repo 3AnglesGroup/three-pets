@@ -22,6 +22,7 @@ class Orden extends Model
         }
       $orden = new Orden();  
       $orden->nombre = $request->nombre;
+      $orden->status = 'Pendiente';
       $orden->total = $request->total;
       $orden->cedula = $request->cedula;
       $orden->correo = $request->correo;

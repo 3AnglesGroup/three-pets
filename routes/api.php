@@ -30,3 +30,11 @@ Route::get('ciudades/{id}','CartController@ciudades');
 
 //Payu
 Route::post('payu/pagar','CartController@pagar');
+
+// Admin
+    // Cliente
+Route::get('cientes-three-pets','UserController@clientes');
+    //Orden
+Route::get('ordenes-three-pets','OrdenController@lista');    
+Route::get('orden-detail/{id}','OrdenController@detail');    
+Route::get('pedido/{id}','OrdenController@pedido');    

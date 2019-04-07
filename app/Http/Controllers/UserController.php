@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\User;
+use Auth;
+use Yajra\Datatables\Datatables;
+
+class UserController extends Controller
+{
+    public function login(Request $request){
+        if (Auth::attempt(['email'=>$request['email'], 'password'=>$request['pass']])) {
+            if (Auth::User()->tipo == 'Admin') {
+                return view('admin.index');
+            }
+          return view('login');
+        }
+      return back();
+    }
+
+    public function registro(){
+        $user = new User();
+        $user->name = 'Administrador';
+        $user->email = 'soporte@three-pets.com';
+        $user->password = bcrypt('silvestre18');
+        $user->save();
+        return 'OK';
+    }
+
+    public function clientes(){
+      $users = User::all();
+        return Datatables::of($users)
+             ->addColumn('btn','admin.partials.botones-cliente')
+             ->rawColumns(['btn'])
+             ->make(true);
+    }
+
+}

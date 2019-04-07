@@ -21,5 +21,8 @@ Route::get('carrito', function () {return view('carrito');});
 Route::get('contacto', function () {return view('contacto');});
 
 //RUTAS ADMIN
+Route::get('login', function () {return view('login');});
 Route::get('admin', function () {return view('admin.index');});
+Route::post('admin','UserController@login');
+Route::get('registrar','UserController@registro');
 //FIN DE RUTAS ADMIN
