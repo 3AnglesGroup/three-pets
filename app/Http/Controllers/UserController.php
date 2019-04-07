@@ -35,7 +35,7 @@ class UserController extends Controller
     }
 
     public function clientes(){
-      $users = User::orderBy('id','DESC');
+      $users = User::where('tipo','Cliente')->orderBy('id','DESC')->get();
         return Datatables::of($users)
              ->addColumn('btn','admin.partials.botones-cliente')
              ->rawColumns(['btn'])
