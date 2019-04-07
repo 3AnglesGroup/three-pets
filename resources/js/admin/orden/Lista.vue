@@ -60,7 +60,11 @@ export default {
           "columns":[
             {data:'status'},
             {data:'referencia'},
-            {data:'total'},
+            {data:'total',
+             "render": function(total) {
+               return '$'+ total;
+             }
+            },
             {data:'nombre'},
             {data:'correo'},
             {data:'celular'},
