@@ -48,6 +48,10 @@
                     <input type="text" class="form-control" v-model="form.nombre" :disabled="editar"   placeholder="Ingresar nombre completo">
                   </div>
                   <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Cedula</label>
+                    <input type="text" class="form-control" v-model="form.cedula" :disabled="editar"   placeholder="Ingresar nombre completo">
+                  </div>
+                  <div class="form-group col-md-6">
                     <label for="exampleInputEmail1">Telefono</label>
                     <input type="text" class="form-control" v-model="form.celular" :disabled="editar"   placeholder="Ingresar nombre completo">
                   </div>
