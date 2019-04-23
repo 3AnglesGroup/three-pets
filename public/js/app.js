@@ -2695,6 +2695,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -51799,7 +51801,11 @@ var staticRenderFns = [
       _c("br"),
       _vm._v("$12.000 a otras ciudades del país."),
       _c("br"),
-      _vm._v("Tu pedido se procesará en 24 horas.")
+      _vm._v("Tu pedido se procesará en 24 horas. "),
+      _c("br"),
+      _vm._v(
+        "\n        Todos los despachos se realizan los días Martes y Jueves. Para órdenes fuera de Bogotá el pedido puede tardar hasta 6 días hábiles.\n        "
+      )
     ])
   }
 ]

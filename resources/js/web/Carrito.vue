@@ -75,7 +75,9 @@
         <div class="content shipping">
         <span class="details-left"><label class="checkbox"><input @change="total()" v-model="bogota" type="checkbox"><span class="checkmark"></span>Gastos de envío a Bogotá</label></span><span class="details-right">$6.000</span>
         <span class="details-left"><label class="checkbox"><input @change="total()" v-model="otrasCiudades" type="checkbox"><span class="checkmark"></span>Gastos de envío otras Ciudades</label></span><span class="details-right">$12.000</span>
-        <small>* $6.000 si es en el área metropolitana de Bogotá.<br>$12.000 a otras ciudades del país.<br>Tu pedido se procesará en 24 horas.</small>
+        <small>* $6.000 si es en el área metropolitana de Bogotá.<br>$12.000 a otras ciudades del país.<br>Tu pedido se procesará en 24 horas. <br>
+        Todos los despachos se realizan los días Martes y Jueves. Para órdenes fuera de Bogotá el pedido puede tardar hasta 6 días hábiles.
+        </small>
         </div>
         </div>
         <div class="separator">
